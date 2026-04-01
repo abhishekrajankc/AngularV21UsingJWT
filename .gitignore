@@ -1,0 +1,24 @@
+# =====================
+# .NET API
+# =====================
+DevPulse.AuthApi/bin/
+DevPulse.AuthApi/obj/
+DevPulse.AuthApi/.vs/
+*.user
+*.suo
+*.sln.ide
+
+# =====================
+# Angular frontend
+# =====================
+dev-pulse-ui/node_modules/
+dev-pulse-ui/dist/
+dev-pulse-ui/.angular/
+dev-pulse-ui/.vscode/ 
+dev-pulse-ui/.vs/ 
+dev-pulse-ui/.npm-cache/
+
+# =====================
+# Logs
+# =====================
+*.log

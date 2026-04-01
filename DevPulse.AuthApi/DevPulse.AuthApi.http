@@ -1,0 +1,6 @@
+@DevPulse.AuthApi_HostAddress = http://localhost:5012
+
+GET {{DevPulse.AuthApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

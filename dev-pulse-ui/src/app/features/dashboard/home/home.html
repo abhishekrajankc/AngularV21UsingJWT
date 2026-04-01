@@ -1,0 +1,77 @@
+<h2>Task Dashboard</h2>
+
+<input type="text"
+       placeholder="Search tasks..."
+       (input)="searchTerm.set($any($event.target).value)" />
+
+@if (filteredTasks().length === 0) {
+<p>No tasks found</p>
+}
+
+<ul>
+  @for (task of filteredTasks(); track task.id; let index = $index) {
+  <li>
+    {{ task.title }} - {{ task.description }}
+
+    <button (click)="removeTask(index)">Remove</button>
+  </li>
+  }
+</ul>
+
+
+<button (click)="addTask()">Add Task</button>
+
+
+<h2>Project Overview</h2>
+
+This project demonstrates a production-style authentication flow:
+
+<ul>
+  <li>User login via API</li>
+  <li>JWT token generation and validation</li>
+  <li>Secure API access using Authorization headers</li>
+  <li>Automatic token expiry handling</li>
+  <li>Reactive UI using Angular Signals</li>
+</ul>
+
+<h2>⚙️ Tech Stack</h2>
+<b>Frontend</b>
+<ul>
+  <li>Angular 21 (Standalone Components) </li>
+  <li>TypeScript </li>
+  <li>Angular Signals (signal, computed, effect) </li>
+  <li>Angular Router </li>
+  <li>HTTP Interceptor </li>
+</ul>
+
+<b>Backend</b>
+
+
+
+<ul>
+  <li>
+    ASP.NET Core Web API (.NET 8)
+  </li>
+  <li>
+    JWT Authentication (Microsoft.AspNetCore.Authentication.JwtBearer)
+  </li>
+  <li>
+    CORS Configuration
+  </li>
+  
+</ul>
+<b>🔐 Authentication Flow</b>
+<ul>
+  <li>
+    User logs in via Angular UI
+  </li>
+  <li>Backend validates credentials</li>
+  <li>JWT token is generated and returned</li>
+  <li>Token is stored in localStorage</li>
+  <li>HTTP Interceptor attaches token to all API requests</li>
+  <li>
+    Backend validates token for protected endpoints
+  </li>
+
+</ul>
+
